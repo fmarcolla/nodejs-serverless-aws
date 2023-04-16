@@ -1,0 +1,19 @@
+{
+  "name": "node-serverless-aws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "optimize.js",
+  "dependencies": {
+    "linux": "^4.2.1",
+    "sharp": "^0.32.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && npm install --plataform=linux --arch=x64 --target=8.10.0 sharp",
+    "deploy": "serverless deploy",
+    "postdeploy": "rm -rf node_modules/sharp && npm install sharp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
